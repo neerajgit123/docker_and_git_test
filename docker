@@ -1,0 +1,56 @@
+Account
+    1. Git Account
+    2. account in hub.docker.com
+
+Git Open
+    1. cretae new repository (repository name), public, Add a README file, Add .gitignore inside click on (.gitignore template) search python 
+    2. create repository 
+    3. git clone in folder
+
+Open Folder to clone a project
+    1. create a requirements.txt file
+    2. creake a Dockerfile
+    3. create a .dockerignor file 
+
+Open hub.docker.com
+    1. click on username then click Account settings
+    2. left side click on security than new access token 
+    3. write project name in Access Token Description and click  generate
+
+Open Git
+    1. open project repository and click setttings
+    2. left side security option click secret than click Dependabot
+    3. click new secret write DOCKERHUB_TEST in Name and write username(as it is hub.docker.com) in value
+    4. click again in new secret write DOCKERHUB_TOKEN in Name and copy paste token(hub.docker.comm) access token in value
+
+creare app folder
+
+Open cmd 
+    1.run docker build .
+
+Ceate .dockerignore file and write file name
+
+Open cmd
+    1. run docker-compopse build
+
+create docker-compose.yml file
+
+create requirements.dev.txt and write some code in .yml file and Dockerfile
+
+Open cmd
+    1. run docker-compopse build
+
+open app folder
+    1. create .flake8 file write some lines
+    2. run docker-compose run --rm app sh -c "flake8"
+
+Start project
+    1. run docker-compopse run --rm app sh -c "django-admin startproject Dockertest ."
+
+Open cmd
+    1. run docker-compopse up (to run services)
+    2. open browser enter 127.0.0.1:8000
+
+For github checks and Action
+    1. create .github folder and inside .github folder create workflows folder
+    2. create a file checks.yml inside workflows folder
