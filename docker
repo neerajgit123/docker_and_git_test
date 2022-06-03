@@ -31,26 +31,52 @@ Open cmd
 Ceate .dockerignore file and write file name
 
 Open cmd
-    1. run docker-compopse build
+    1. run docker-compose build
 
 create docker-compose.yml file
 
 create requirements.dev.txt and write some code in .yml file and Dockerfile
 
 Open cmd
-    1. run docker-compopse build
+    1. run docker-compose build
 
 open app folder
     1. create .flake8 file write some lines
     2. run docker-compose run --rm app sh -c "flake8"
 
 Start project
-    1. run docker-compopse run --rm app sh -c "django-admin startproject Dockertest ."
+    1. run docker-compose run --rm app sh -c "django-admin startproject Dockertest ."
+
+Open hub.docker.com
+    1. click on username then click Account settings
+    2. left side click on security than new access token 
+    3. write project name in Access Token Description and click  generate
+
+Open Git
+    1. open project repository and click setttings
+    2. left side security option click secret than click Dependabot
+    3. click new secret write DOCKERHUB_USER in Name and write username(as it is hub.docker.com) in value
+    4. click again in new secret write DOCKERHUB_TOKEN in Name and copy paste token(hub.docker.comm) access token in value
+
 
 Open cmd
-    1. run docker-compopse up (to run services)
+    1. run docker-compose up (to run services)
     2. open browser enter 127.0.0.1:8000
 
 For github checks and Action
     1. create .github folder and inside .github folder create workflows folder
     2. create a file checks.yml inside workflows folder
+    3. write some code in checks.yml file
+    4. push the code on git 
+
+Open cmd
+    1. run unit test
+        run docker-compose run --rm app sh -c "python manage.py test"
+    2. than run flake8
+        run docker-compose run --rm app sh -c "flake8"
+
+open hub.docker.com 
+    1. delete access token
+
+open github.com
+    1. delete secret in project repository
